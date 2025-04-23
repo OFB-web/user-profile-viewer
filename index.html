@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Joshua Web 1</title>
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>User Profile Viewer</h1>
+        <!-- 🌙 Dark Mode Toggle Button -->
+        <button id="themeToggle" style="padding: 0.5rem 1rem; border: none; background-color: #3498db; color: white; border-radius: 5px; cursor: pointer;">
+          🌙
+        </button>
+      </header>
+
+      <main>
+        <div class="profile-container">
+          <div class="user-list-container">
+            <h2>Users</h2>
+            <div id="userList" class="user-list"></div>
+          </div>
+          <div class="user-details-container">
+            <h2>User Details</h2>
+            <div id="userDetails" class="user-details">
+              <p class="select-user-message">Select a user to view details</p>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer style="text-align: center; margin-top: 2rem">
+        &copy; Joshua
+      </footer>
+
+      <div id="errorContainer" class="error-container hidden"></div>
+    </div>
+
+    <script>
+      // 🌗 Dark Mode Toggle Script
+      document.addEventListener('DOMContentLoaded', () => {
+        const toggleBtn = document.getElementById('themeToggle');
+        toggleBtn.addEventListener('click', () => {
+          document.body.classList.toggle('dark');
+        });
+      });
+    </script>
+    <script src="./assets/js/app.js"></script>
+  </body>
+</html>
